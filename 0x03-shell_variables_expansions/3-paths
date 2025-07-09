@@ -1,0 +1,4 @@
+#!/bin/bash
+# Count the number of directories in PATH by splitting on colon and counting fields
+IFS=':' read -ra dirs <<< "$PATH"
+echo "${#dirs[@]}"
