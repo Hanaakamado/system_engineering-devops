@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
-# Script that lists filenames in the current directory, showing only the part after the first dash
+# This script lists files in the current directory, printing the part after the first dash if any, else full filename
 
 for file in *; do
-  if [[ -f "$file" && "$file" == *-* ]]; then
-    echo "${file#*-}"
+  if [[ -f "$file" ]]; then
+    if [[ "$file" == *-* ]]; then
+      echo "${file#*-}"
+    else
+      echo "$file"
+    fi
   fi
 done
