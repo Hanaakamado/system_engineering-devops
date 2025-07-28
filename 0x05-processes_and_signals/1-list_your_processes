@@ -1,5 +1,2 @@
 #!/usr/bin/env bash
-# This script lists all running processes for all users, including those without TTY,
-# showing them in a user-friendly hierarchical format.
-
-ps -ef --forest
+ps -o uid= -o cmd=
