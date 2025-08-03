@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Script to display PID and process name of all bash processes
+# Script to display PID and full path to bash process
 
-pgrep -a bash | awk '{print $1, $2}'
+pgrep -af bash | awk '{print $1, $2}'
