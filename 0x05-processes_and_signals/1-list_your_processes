@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ps -o uid= -o cmd=
+ps -eo uid=,cmd=
